@@ -1,0 +1,1 @@
+"use strict";const{app:e,BrowserWindow:n}=require("electron/main");require("node:path");e.whenReady().then(()=>{const i=new n({title:"Main window"});process.env.VITE_DEV_SERVER_URL?i.loadURL(process.env.VITE_DEV_SERVER_URL):i.loadFile("dist/index.html")});e.on("window-all-closed",()=>{process.platform!=="darwin"&&e.quit()});
